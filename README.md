@@ -1,82 +1,76 @@
-# Fake Social Media Profile Detection using Machine Learning
+# Fake Social Media Profile Detection Using Machine Learning
 
-## 📌 Overview
+A machine learning project that classifies social media accounts as fake or genuine using profile-level metadata and a Random Forest model. The repository is designed as a practical applied-ML project focused on fraud detection and account authenticity analysis.
 
-This project detects fake social media profiles using a Machine Learning approach. A Random Forest Classifier is trained on profile-based features to classify users as fake or genuine.
+## Overview
 
-## 🎯 Objective
+The system uses structured account features to identify suspicious profiles that may contribute to spam, fraud, impersonation, or misinformation on social platforms.
 
-To automatically identify fake profiles and reduce risks like fraud, misinformation, and spam on social platforms.
+## Objective
 
-## 📊 Dataset
+To automatically distinguish fake profiles from genuine user accounts through supervised machine learning.
 
-* users.csv → Genuine profiles
-* fusers.csv → Fake profiles
+## Dataset
 
-## ⚙️ Features Used
+- `users.csv` - genuine profiles
+- `fusers.csv` - fake profiles
 
-* statuses_count
-* followers_count
-* friends_count
-* favourites_count
-* listed_count
-* lang_code
+## Features Used
 
-## 🤖 Model
+- `statuses_count`
+- `followers_count`
+- `friends_count`
+- `favourites_count`
+- `listed_count`
+- `lang_code`
 
-* Algorithm: Random Forest Classifier
-* Trees: 40
-* Train-Test Split: 80:20
-* Cross-validation: 5-fold
+## Model
 
-## 📈 Results
+- Algorithm: Random Forest Classifier
+- Number of trees: 40
+- Train-test split: 80:20
+- Cross-validation: 5-fold
 
-* Accuracy: ~94%
-* ROC-AUC: 0.94
-* High recall for fake profiles (≈99%)
+## Results
 
-## 📉 Evaluation Metrics
+- Accuracy: approximately 94%
+- ROC-AUC: 0.94
+- strong recall for fake-profile identification
 
-* Confusion Matrix
-* Classification Report
-* ROC Curve
+## Evaluation
 
-## 🛠️ Tech Stack
+The project uses:
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
+- confusion matrix
+- classification report
+- ROC curve
 
-## ▶️ How to Run
+## Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+
+## How To Run
 
 ```bash
 pip install -r requirements.txt
 python src/main.py
 ```
 
-## 📂 Project Structure
+## Project Structure
 
-* `data/` → dataset
-* `notebook/` → analysis & visualization
-* `src/` → clean production code
-* `model/` → trained model
-* `results/` → graphs
+- `data/` - input datasets
+- `notebook/` - analysis and experimentation
+- `src/` - source code
+- `model/` - trained model artifacts
+- `results/` - generated outputs and visuals
 
-## 🚧 Challenges
+## Future Improvements
 
-* Gender feature removed due to library incompatibility
-
-## 🔮 Future Scope
-
-* NLP for bio analysis
-* Profile image analysis
-* Network-based features
-* Account age & location
-
-## 👨‍💻 Author
-
-Abhishek Kumar
-Lovely Professional University
-India
+- add NLP-based profile bio analysis
+- integrate profile image-based features
+- include network and graph-based behavior signals
+- extend with account-age and temporal activity features
