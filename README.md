@@ -12,8 +12,10 @@ To automatically distinguish fake profiles from genuine user accounts through su
 
 ## Dataset
 
-- `users.csv` - genuine profiles
-- `fusers.csv` - fake profiles
+The training data lives in the nested project directory:
+
+- `Fake-Profile-Detection-Using-ML/Data/users.csv` - genuine profiles
+- `Fake-Profile-Detection-Using-ML/Data/fusers.csv` - fake profiles
 
 ## Features Used
 
@@ -37,13 +39,14 @@ To automatically distinguish fake profiles from genuine user accounts through su
 - ROC-AUC: 0.94
 - strong recall for fake-profile identification
 
-## Evaluation
+## Evaluation Outputs
 
-The project uses:
+The script generates:
 
-- confusion matrix
-- classification report
-- ROC curve
+- console metrics and classification report
+- `results/learning_curve.png`
+- `results/confusion_matrix.png`
+- `results/roc_curve.png`
 
 ## Tech Stack
 
@@ -56,17 +59,16 @@ The project uses:
 ## How To Run
 
 ```bash
-pip install -r requirements.txt
-python src/main.py
+pip install -r Fake-Profile-Detection-Using-ML/requirements.txt
+python Fake-Profile-Detection-Using-ML/src/main.py
 ```
 
 ## Project Structure
 
-- `data/` - input datasets
-- `notebook/` - analysis and experimentation
-- `src/` - source code
-- `model/` - trained model artifacts
-- `results/` - generated outputs and visuals
+- `Fake-Profile-Detection-Using-ML/Data/` - input datasets
+- `Fake-Profile-Detection-Using-ML/Notebook/` - experimentation assets
+- `Fake-Profile-Detection-Using-ML/src/` - cleaned source code
+- `Fake-Profile-Detection-Using-ML/results/` - generated evaluation plots
 
 ## Future Improvements
 
